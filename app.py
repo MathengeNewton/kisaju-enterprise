@@ -4,7 +4,7 @@ from config import *
 app = Flask(__name__)
 app.config.from_object(DevelopmentConfig)
 
-@app.route('/')
+@app.route('/',methods=['GET','POST'])
 def main_page():
     return render_template('index.html')
 
